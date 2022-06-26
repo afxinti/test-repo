@@ -1,21 +1,13 @@
-// Create an object and an array which we will use in our facebook exercise. 
-
-// 1. Create an object that has properties "username" and "password". Fill those values in with strings.
-{
-	username: "andrei",
-	password: "supersecret"
-}
-
-// 2. Create an array which contains the object you have made above and name the array "database"
+// 2. Create an array which contains objects
 var database = [
 	{
 		username: "andrei",
 		password: "secret"
-	}
+	},
 	{
 		username: "coco",
 		password: "123"
-	}
+	},
 	{
 		username: "mel",
 		password: "111"
@@ -38,9 +30,24 @@ var newsfeed = [
 	}
 ];
 
+//function to check if the user is verified
+function userValid(username,password){
+	for(var i=0; i<database.length; i++){
+		if(database[i].username === username && database[i].password === password){
+			return true
+		}
+		return false	
+	}
+};
+
+//signIn if valid and show newsfeed
 function signIn(username,password){
-	if (userValid)
-}
+	if (userValid(username,password)){
+		console.log(newsfeed);
+	}else {
+		console.log ('Wrong username or password')
+	}
+};
 
 var userPrompt = prompt('What is your username?');
 var passPrompt= prompt('What is your password?');
