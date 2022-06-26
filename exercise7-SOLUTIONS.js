@@ -35,9 +35,9 @@ function userValid(username,password){
 	for(var i=0; i<database.length; i++){
 		if(database[i].username === username && database[i].password === password){
 			return true
-		}
-		return false	
+		}	
 	}
+	return false
 };
 
 //signIn if valid and show newsfeed
