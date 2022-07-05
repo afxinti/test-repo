@@ -1,3 +1,6 @@
+//challenge with one number (n) create array from 1 to n and check for 
+// multipliers of 3 and 5
+
 function fizzbuzz(n) {
     let fizzray = [];
     for (let i=0; i<n; i++){
